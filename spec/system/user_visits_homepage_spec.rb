@@ -5,5 +5,9 @@ RSpec.describe "User Visits Homepage", type: :system do
     driven_by(:rack_test)
   end
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+  it "successfully" do
+    visit root_path
+
+    expect(page).to have_text("Welcome to what's next")
+  end
 end

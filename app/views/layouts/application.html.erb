@@ -17,7 +17,7 @@
     <nav class="navbar has-shadow">
       <div class="navbar-brand">
         <a class="navbar-item">
-          <img src="images/request.png">
+          <%= image_tag 'request.png' %>
         </a>
         <div class="navbar-burger burger">
           <span></span>
@@ -40,7 +40,7 @@
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
             <div class="navbar-link">
-              Alex Johnson
+              <%= current_user.email %>
             </div>
             <div class="navbar-dropdown is-right">
               <a class="navbar-item">
@@ -59,19 +59,24 @@
                   Report bug
                 </div>
               </a>
-              <a class="navbar-item">
+
+              <%= link_to destroy_user_session_path, method: :delete, class: 'navbar-item' do %>
                 <div>
                   <span class="icon is-small">
                     <i class="fa fa-sign-out"></i>
                   </span>
                   Sign Out
                 </div>
-              </a>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
     </nav>
+    <div id="flashes">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
   </body>
     <footer>

@@ -1,5 +1,5 @@
 .has-index-bg-image {
-  background-image: url(../images/index-hero-bg-library2.jpeg);
+  background-image: image-url("index-hero-bg-library2.jpeg");
 }
 
 .is-cianish {

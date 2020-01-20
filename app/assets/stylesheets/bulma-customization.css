@@ -1,0 +1,27 @@
+.has-index-bg-image {
+  background-image: url(../images/index-hero-bg-library2.jpeg);
+}
+
+.is-cianish {
+  color: #5edada;
+}
+
+.card {
+  height: 100%;
+}
+
+.image.is-256x256 {
+  width: 256px;
+}
+
+.has-margin-20 {
+  margin: 20px;
+}
+
+.has-margin-30 {
+  margin: 30px;
+}
+
+.has-margin-50 {
+  margin: 50px;
+}

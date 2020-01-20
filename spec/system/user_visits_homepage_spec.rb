@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "User Visits Homepage", type: :system do
+RSpec.describe "Guest visits homepage", type: :system do
   before do
     driven_by(:rack_test)
   end
@@ -8,6 +8,6 @@ RSpec.describe "User Visits Homepage", type: :system do
   it "successfully" do
     visit root_path
 
-    expect(page).to have_text("Welcome to what's next")
+    expect(page).to have_text("You need to sign in or sign up before continuing.")
   end
 end

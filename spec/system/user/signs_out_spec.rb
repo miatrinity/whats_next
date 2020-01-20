@@ -12,7 +12,7 @@ RSpec.describe 'User signs out', type: :system do
 
     sign_in user.email, user.password
 
-    click_on "Sign Out"
+    click_on 'Sign Out'
 
     expect(page).to have_text('Signed out successfully.')
   end

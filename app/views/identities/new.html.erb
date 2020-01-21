@@ -62,8 +62,8 @@
 
               <div class="field">
                 <div class="buttons">
-                  <button class="button is-medium is-success">Create Identity</button>
-                  <button class="button is-medium is-light">Cancel</button>
+                  <%= form.submit "Create Identity", class: 'button is-medium is-success' %>
+                  <%= link_to 'Cancel', identities_path, class: 'button is-medium is-light' %>
                 </div>
               </div>
             <% end %>

@@ -18,10 +18,8 @@ RSpec.describe 'User creates identity', type: :system do
 
     click_on 'Create Identity'
 
-    # binding.pry
-
     expect(page).to have_text('Identity was successfully created.')
     expect(page).to have_text("I'm a great dev")
-    expect(page).to have_css("img[src*=identity]", count: 1)
+    expect(page).to have_css('img[src*=identity]', count: 1)
   end
 end

@@ -41,5 +41,3 @@ class IdentitiesController < ApplicationController
     identity_params ? identity_params.permit(:name, :avatar) : {}
   end
 end
-
-

@@ -2,9 +2,11 @@
 
 # :nodoc:
 class Identity < ApplicationRecord
-  validates_presence_of :name
-
   belongs_to :user
 
   has_one_attached :avatar
+
+  validates_presence_of :name
+
+  validates :avatar, attached: true
 end

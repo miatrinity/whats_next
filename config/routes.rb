@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: 'identities#index'
+
+  resources :identities, only: %i[new create index]
 end

@@ -12,7 +12,7 @@
               </div>
 
               <p class="level-item">
-                <a class="button is-success" href="new-identity.html">New</a>
+                <%= link_to 'New', new_identity_path, class: 'button is-success' %>
               </p>
 
               <div class="level-item is-hidden-tablet-only">
@@ -47,152 +47,11 @@
           </nav>
 
           <div class="columns is-multiline">
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                  <%= image_tag 'intellect.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-centered">
-                  <a href="#">I'm a Learner</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                  <%= image_tag 'coworking.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-vcentered">
-                  <a href="#">I'm an asset at work</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                  <%= image_tag 'knowledge.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-vcentered">
-                  <a href="#">I'm a reader</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                  <%= image_tag 'celebration.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-vcentered">
-                  <a href="#">I'm Entertained</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-              <div class="box">
-                <%= image_tag 'laundry.png' %>
-              </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized has-text-centered">
-                  <a href="#">I'm organized</p></a>
-                </p>
-                </br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                  <%= image_tag 'spanish-language.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-vcentered">
-                  <a href="#">I'm a Spanish speaker</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                <%= image_tag 'puzzle.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-vcentered">
-                  <a href="#">I'm Connected</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="column is-6-tablet is-4-desktop is-3-widescreen">
-              <article class="box has-text-centered card">
-                <div class="box">
-                  <%= image_tag 'south-korea.png' %>
-                </div>
-                <p class="title is-3 is-spaced is-marginless is-capitalized is-vcentered">
-                  <a href="#">I'm a Korean Speaker</a>
-                </p>
-                <br>
-                <div class="content is-small">
-                  <a href="#">Edit</a>
-                  <span>·</span>
-                  <a>Delete</a>
-                  <p></p>
-                </div>
-              </article>
-            </div>
+            <%= render @identities %>
           </div>
-            <br>
-            <br>
+
+          <br>
+          <br>
 
           <nav class="pagination">
             <a class="pagination-previous">Previous</a>

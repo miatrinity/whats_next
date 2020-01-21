@@ -1,0 +1,73 @@
+    <section class="section">
+      <div class="columns">
+
+        <div class="column">
+          <nav class="breadcrumb">
+            <ul>
+              <li>
+                <a href="#">Identities</a>
+              </li>
+              <li class="is-active">
+                <a href="#">New Identity</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="column is-8-tablet is-6-desktop is-6-widescreen">
+            <%= form_with model: @identity, local: true do |form| %>
+              <% if @identity.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@identity.errors.count, "error") %> prohibited this identity from being saved:</h2>
+
+                  <ul>
+                    <% @identity.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+
+
+              <div class="field">
+                <div class="field">
+                  <%= form.label :name, class: 'label' %>
+                  <div class="control">
+                    <%= form.text_field :name, class:'input is-large', placeholder: "e.g. I'm Superman", required: true  %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <%= form.label :avatar, class: 'label' %>
+                <div class="control">
+                  <div class="file has-name">
+                    <label class="file-label">
+                      <%= form.file_field :avatar, class: 'file-input' %>
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fa fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="buttons">
+                  <button class="button is-medium is-success">Create Identity</button>
+                  <button class="button is-medium is-light">Cancel</button>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>

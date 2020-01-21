@@ -8,9 +8,7 @@ RSpec.describe Identity, type: :model do
   end
 
   describe '#avatar' do
-    subject { create(:identity, :with_avatar).avatar }
-
-    it { is_expected.to be_an_instance_of(ActiveStorage::Attached::One) }
+    it { is_expected.to validate_attachment_of(:avatar) }
   end
 
   describe 'associations' do

@@ -52,7 +52,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 4.2'
   gem 'simplecov', '~> 0.17.1', require: false
   gem 'webdrivers'
 end

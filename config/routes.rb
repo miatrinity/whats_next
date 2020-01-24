@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   }
   root to: 'identities#index'
 
-  resources :identities, only: %i[new create index]
+  resources :identities, except: %i[show destroy]
 end

@@ -21,5 +21,6 @@ RSpec.describe 'User creates identity', type: :system do
     expect(page).to have_text('Identity was successfully created.')
     expect(page).to have_text("I'm a great dev")
     expect(page).to have_css('img[src*=identity]', count: 1)
+    expect(page).to have_css('#identity-count', count: 1, text: '1')
   end
 end

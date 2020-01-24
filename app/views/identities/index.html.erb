@@ -6,13 +6,13 @@
           <nav class="level">
             <div class="level-left">
               <div class="level-item">
-                <p class="subtitle is-5">
-                  <strong>6</strong> identities
+                <p id="identity-count" class="subtitle is-5">
+                  <strong><%= @identities.size %></strong> identities
                 </p>
               </div>
 
               <p class="level-item">
-                <%= link_to 'New', new_identity_path, class: 'button is-success' %>
+                <%= link_to 'New', new_identity_path, class: "button is-success" %>
               </p>
 
               <div class="level-item is-hidden-tablet-only">

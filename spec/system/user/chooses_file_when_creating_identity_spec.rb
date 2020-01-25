@@ -12,6 +12,6 @@ RSpec.describe 'User chooses file when creating identity', type: :system do
                 Rails.root.join('spec', 'fixtures', 'identity.png'),
                 make_visible: true
 
-    expect(page).to have_css('.file-name', text: 'identity.png', count: 1)
+    expect(page).to have_css('#identity_avatar ~ .file-name', text: 'identity.png', count: 1)
   end
 end

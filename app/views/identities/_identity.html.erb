@@ -1,4 +1,4 @@
-<div class="column is-6-tablet is-4-desktop is-3-widescreen">
+<div class="column is-6-tablet is-4-desktop is-3-widescreen" id=<%= dom_id(identity) %> >
   <article class="box has-text-centered card">
     <div class="box">
       <%= image_tag identity.avatar %>
@@ -10,7 +10,7 @@
     <div class="content is-small">
       <%= link_to "Edit", edit_identity_path(identity) %>
       <span>·</span>
-      <a>Delete</a>
+      <%= link_to "Delete", identity, method: :delete, data: { confirm: "Are you sure you want to remove #{identity.name} from WhatsNext? "} %>
       <p></p>
     </div>
   </article>

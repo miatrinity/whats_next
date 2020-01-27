@@ -28,6 +28,13 @@ class IdentitiesController < ApplicationController
     save_identity('Identity was successfully updated.') or render :edit
   end
 
+  def destroy
+    load_identity
+    @identity.destroy
+
+    redirect_to identities_path, notice: 'Identity was successfully deleted.'
+  end
+
   private
 
   def load_identities

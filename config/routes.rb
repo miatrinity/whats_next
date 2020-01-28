@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root to: 'identities#index'
 
   resources :identities, except: :show do
-    resources :facets, only: %i[index new create]
+    resources :facets, except: :show
   end
+  #  only: %i[index new create edit]
 end

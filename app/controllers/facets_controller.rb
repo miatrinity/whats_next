@@ -18,10 +18,27 @@ class FacetsController < ApplicationController
     save_facet('Facet was successfully created.') or render :new
   end
 
+  def edit
+    load_identity
+    load_facet
+    build_facet
+  end
+
+  def update
+    load_identity
+    load_facet
+    build_facet
+    save_facet('Facet was successfully updated.') or render :edit
+  end
+
   private
 
   def load_facets
     @facets ||= facet_scope.to_a
+  end
+
+  def load_facet
+    @facet ||= facet_scope.find(params[:id])
   end
 
   def build_facet

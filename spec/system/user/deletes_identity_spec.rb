@@ -16,6 +16,6 @@ RSpec.describe 'User deletes identity', type: :system do
 
     expect(page).to have_text('Identity was successfully deleted.')
     expect(page).to_not have_css('[id^=identity_]')
-    expect(page).to have_css('#identity-count', count: 1, text: '0')
+    expect(page).to have_css('#identity-count', text: '0')
   end
 end

@@ -3,6 +3,7 @@
 # :nodoc:
 class Identity < ApplicationRecord
   belongs_to :user
+  has_many :facets
 
   has_one_attached :avatar
 

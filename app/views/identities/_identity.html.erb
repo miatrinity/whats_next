@@ -4,7 +4,7 @@
       <%= image_tag identity.avatar %>
     </div>
     <p class="title is-3 is-spaced is-marginless is-capitalized is-centered">
-      <a href="#"><%= identity.name %></a>
+      <%= link_to identity.name, identity_facets_path(identity) %>
     </p>
     <br>
     <div class="content is-small">

@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <nav class="breadcrumb">
+        <ul>
+          <li>
+            <a href="#">Facets</a>
+          </li>
+          <li class="is-active">
+            <a href="#">New Facet</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="column is-8-tablet is-6-desktop is-6-widescreen">
+        <%= render 'form', facet: @facet, identity: @identity %>
+      </div>
+    </div>
+  </div>
+</section>

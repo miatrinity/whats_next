@@ -1,19 +1,24 @@
+    <section class="section">
+      <div class="columns">
+        <div class="column">
+          <h1 class="title ">Facets</h1>
+
 <nav class="level">
   <div class="level-left">
     <div class="level-item">
-      <p id="identity-count" class="subtitle is-5">
-        <strong><%= records.size %></strong> <%= record_name.pluralize %>
+      <p id="facet-count" class="subtitle is-5">
+        <strong><%= @facets.size %></strong> <%= 'facet'.pluralize %>
       </p>
     </div>
 
     <p class="level-item">
-      <%= link_to 'New', url_for(action: 'new'), class: "button is-success" %>
+      <%= link_to 'New', url_for([:new, @identity, :facet]), class: "button is-success" %>
     </p>
 
     <div class="level-item is-hidden-tablet-only">
       <div class="field has-addons">
         <p class="control">
-          <input class="input" type="text" placeholder="<%= record_name.capitalize %> name, keyword…">
+          <input class="input" type="text" placeholder="Facet, keyword…">
         </p>
         <p class="control">
           <button class="button">
@@ -40,3 +45,21 @@
     </div>
   </div>
 </nav>
+
+          <%#= render "shared/navigation", records: @facets, record_name: 'facet'  %>
+
+
+
+
+
+          <div class="columns is-multiline">
+            <%= render @facets %>
+          </div>
+
+          <br>
+          <br>
+
+          <%= render "shared/pagination" %>
+        </div> <!-- end of colum -->
+      </div> <!-- end of colums -->
+    </section>

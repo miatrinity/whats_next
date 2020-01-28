@@ -3,5 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  xit 'does something'
+  describe 'associations' do
+    it { should have_many(:identities) }
+  end
 end

@@ -1,0 +1,31 @@
+<%= form_with model: identity, local: true do |form| %>
+  <% if identity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(identity.errors.count, "error") %> prohibited this identity from being saved:</h2>
+
+      <ul>
+        <% identity.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="field">
+      <%= form.label :name, class: 'label' %>
+      <div class="control">
+        <%= form.text_field :name, class:'input is-large', placeholder: "e.g. I'm Superman", required: true  %>
+      </div>
+    </div>
+  </div>
+
+  <%= render "avatar_upload", form: form, identity: identity %>
+
+  <div class="field">
+    <div class="buttons">
+      <%= form.submit class: 'button is-medium is-success' %>
+      <%= link_to 'Cancel', identities_path, class: 'button is-medium is-light' %>
+    </div>
+  </div>
+<% end %>

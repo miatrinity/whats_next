@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: 'identities#index'
+
+  resources :identities, except: :show
 end

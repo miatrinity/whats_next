@@ -3,48 +3,7 @@
         <div class="column">
           <h1 class="title ">Identities</h1>
 
-          <nav class="level">
-            <div class="level-left">
-              <div class="level-item">
-                <p id="identity-count" class="subtitle is-5">
-                  <strong><%= @identities.size %></strong> identities
-                </p>
-              </div>
-
-              <p class="level-item">
-                <%= link_to 'New', new_identity_path, class: "button is-success" %>
-              </p>
-
-              <div class="level-item is-hidden-tablet-only">
-                <div class="field has-addons">
-                  <p class="control">
-                    <input class="input" type="text" placeholder="Identity name, keyword…">
-                  </p>
-                  <p class="control">
-                    <button class="button">
-                      Search
-                    </button>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="level-right">
-              <div class="level-item">
-                Order by
-              </div>
-              <div class="level-item">
-                <div class="select">
-                  <select>
-                    <option>Name</option>
-                    <option>Date Last Opened</option>
-                    <option>Date Created</option>
-                    <option>Date Modified</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </nav>
+          <%= render "shared/navigation", records: @identities, record_name: 'identity'  %>
 
           <div class="columns is-multiline">
             <%= render @identities %>

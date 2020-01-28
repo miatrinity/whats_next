@@ -3,6 +3,7 @@
     <p class="is-success"><%= notice %></p>
     <p class="is-danger"><%= alert %></p>
   </div>
+
   <div class='field'>
     <%= f.label :Email, class: 'label'%>
     <div class='control has-icons-left'>
@@ -12,6 +13,7 @@
       <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'input', placeholder: 'e.g. han.solo@gmail.com' %>
     </div>
   </div>
+  
   <div class='field'>
     <%= f.label :Password, class: 'label' %>
     <div class='control has-icons-left'>

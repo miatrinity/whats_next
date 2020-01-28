@@ -8,10 +8,9 @@ RSpec.describe 'User edits identity', type: :system do
   end
 
   it 'successfully' do
-    user = create(:user)
-    create(:identity, user: user)
+    identity = create(:identity)
 
-    login_as user
+    login_as identity.user
 
     visit identities_path
 
